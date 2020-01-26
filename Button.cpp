@@ -10,12 +10,18 @@ void setup()
 
 void loop()
 {
+  digitalWrite(led, HIGH);
   if (digitalRead(button)==HIGH)
   {
-    digitalWrite(led, HIGH);
-  }
-  else()
-  {
+    delay(200);
     digitalWrite(led,LOW);
+    delay(200);
+
+  }
+  else
+  {
+    delay(800);
+    digitalWrite(led,LOW);
+    delay(800);
   }
 }
