@@ -25,5 +25,5 @@ if (count==1);
  digitalWrite(opposition, HIGH);
 count--;
 }
-delay(1000);
+delay(100);
 }
