@@ -1,7 +1,9 @@
-#include <Arduino.h>
+#in#include <Arduino.h>
 
 int button = 25;
 int led = 2;
+int hightime = 400;
+int lowtime = 100;
 void setup()
 {
   pinMode(button,INPUT);
@@ -13,15 +15,15 @@ void loop()
   digitalWrite(led, HIGH);
   if (digitalRead(button)==HIGH)
   {
-    delay(200);
+    delay(lowtime);
     digitalWrite(led,LOW);
-    delay(200);
+    delay(lowtime);
 
   }
   else
   {
-    delay(800);
+    delay(hightime);
     digitalWrite(led,LOW);
-    delay(800);
+    delay(hightime);
   }
 }
