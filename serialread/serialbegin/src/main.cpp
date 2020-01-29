@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-int val = 0;
-int led = 2; // пин лампочки
+int val = 0;  // cтартовое значение
+int led = 2;  // пин лампочки
 
 void setup()
 {
@@ -19,6 +19,6 @@ void loop()
     digitalWrite(led,HIGH);
     delay(400);
     digitalWrite(led,LOW);
-    Serial.flush();
+    Serial.flush();  //очистка памяти после завершения цикла
   }
  }
