@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #define SENSOR_PIN 25   // select the input pin for the potentiometer
-#define LED_BUILTIN 13
+#define LED_BUILTIN 2
 
 String inputString = "";         // Буфер(объект типа "строка") для приема символов из посл. порта
 bool stringComplete = false;     // флаг окончания ввода строки
