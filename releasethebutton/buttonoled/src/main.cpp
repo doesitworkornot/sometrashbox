@@ -10,10 +10,13 @@ int button = 25;
 
 void setup()
 {
-    pinMode(button, INPUT);
-    u8g2.begin();
-  	u8g2.enableUTF8Print();
-    u8g2.setFont(u8g2_font_6x12_t_cyrillic);
+	pinMode(button, INPUT);
+	u8g2.begin();
+	u8g2.enableUTF8Print();
+	u8g2.setFont(u8g2_font_6x12_t_cyrillic);
+	Serial.begin(115200);
+	Serial.println("Устройство запущено");
+
 }
 
 void loop()
@@ -25,9 +28,16 @@ void loop()
       u8g2.setCursor(50, 30);
       u8g2.print("BAKA!");
       u8g2.sendBuffer();
+
+			Serial.println("нажато");
+
     }
     else
     {
       u8g2.clearBuffer();
+
+			u8g2.sendBuffer();
+			Serial.println("отжато");
     }
+		delay(500);
 }
