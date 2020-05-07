@@ -14,7 +14,7 @@ void setup()
 	u8g2.begin();
 	u8g2.enableUTF8Print();
 	u8g2.setFont(u8g2_font_6x12_t_cyrillic);
-	Serial.begin(115200);
+	Serial.begin(57200);
 	Serial.println("Устройство запущено");
 
 }
@@ -39,5 +39,5 @@ void loop()
 			u8g2.sendBuffer();
 			Serial.println("отжато");
     }
-		delay(500);
+		delay(5);
 }
