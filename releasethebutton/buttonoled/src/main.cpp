@@ -6,7 +6,7 @@
 #endif
 
 U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0, U8X8_PIN_NONE, /*scl=*/ 21, /*sda=*/ 22);
-int button = 25;
+int button = 2;
 
 void setup()
 {
@@ -14,7 +14,7 @@ void setup()
 	u8g2.begin();
 	u8g2.enableUTF8Print();
 	u8g2.setFont(u8g2_font_6x12_t_cyrillic);
-	Serial.begin(57200);
+	Serial.begin(9600);
 	Serial.println("Устройство запущено");
 
 }
