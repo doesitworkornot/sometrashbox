@@ -4,15 +4,17 @@ String username = "";
 String inputstr = "";
 bool usernamecomplete = true;
 bool stringComplete = false;
-int commandMaxLen = 10;
+int commandMaxLen = 20;
 void serialEvent();
 void cmdProc(String);
+int led(25);
 
 void setup()
  {
 	Serial.begin(9600);
   Serial.println("It's workin'");
   Serial.println("How do u want to be called");
+  pinMode(led, OUTPUT);
 
 }
 
@@ -65,6 +67,13 @@ void cmdProc(String cmd) {
     stringComplete=false;
     inputstr = "";
    }
+  else if(inputstr=="Light on"){
+    digitalWrite(led, HIGH);
+  }
+  else if(inputstr=="Light off"){
+    digitalWrite(led, LOW);
+  }
+
   else
   {
     Serial.println("Incorrect command");
